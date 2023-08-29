@@ -29,4 +29,4 @@ const ShuffleString = (str) => {
   }
   return string;
 };
-// console.log(generateRandomPassword(10));
+console.log(generateRandomPassword(10));

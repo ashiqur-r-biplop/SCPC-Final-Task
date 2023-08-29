@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Button Creation</title>
+</head>
+
+<body>
+    <button id="createButton" onclick={createButton}>Create Button</button>
+    <div id="buttonContainer"></div>
+
+    <div id="counter" style="padding: 20px; background-color: aqua;">
+        <button id="addColor">color</button>
+    </div>
+
+    <script>
+        const getDomId = (name) => {
+            return document.getElementById(name)
+        }
+        const addedByColor = (e) => {
+            alert("child")
+        }
+        const counter = (e) => {
+            alert("parant")
+        }
+        const addCounter = getDomId("counter")
+        const addColor = getDomId("addColor")
+        addColor.addEventListener("click", addedByColor, true)
+
+        addCounter.addEventListener("click", counter, true)
+    </script>
+</body>
+
+</html>
